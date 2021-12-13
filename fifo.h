@@ -30,13 +30,15 @@ class LinkedList{
         LinkedList();
         ~LinkedList();
 
-        bool addNode(int, string*);//rename to push, only add to head
+        bool push(int, string*);//rename to push, only add to head
         bool pop();
         bool getNode(int, Data*);//rename to peek. does the same thing
-        void printList(bool = false);
         bool isEmpty();//new method needs definition
+
         void clearList();
+        void printList(bool = false);
     private:
+        Node* createNode(int, string*);
         Node *head;
         int nodes;
 };

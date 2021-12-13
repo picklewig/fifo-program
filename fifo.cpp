@@ -23,13 +23,14 @@ Node* LinkedList::createNode(int id, string* information){
     return newNode;
 }
 
-bool LinkedList::addNode(int id, string* information){
+bool LinkedList::push(int id, string* information){
     bool added = false;
     if(id > 0 and *information != ""){
         Node *current = head; //head initially is NULL
         if(head == NULL){//starts list head
             head = createNode(id, information);
             added = true;
+            nodes++;
         }
         else{//adds new head node
             Node *insertNode = createNode(id, information);
@@ -37,6 +38,7 @@ bool LinkedList::addNode(int id, string* information){
             insertNode->next = current;
             head = insertNode;
             added = true;
+            nodes++;
         }
     }
     return added;
@@ -57,6 +59,7 @@ bool LinkedList::pop(){
         }
         delete current;
         deleted = true;
+        nodes--;
     }
     return deleted;
 }
@@ -101,16 +104,6 @@ void LinkedList::printList(bool backwards){
     }
 }
 
-int LinkedList::getCount(){
-    Node *current = head;
-    int nodeCount = 0;
-
-    while(current){
-        current = current->next;
-        nodeCount++;
-    }
-    return nodeCount;
-}
 
 void LinkedList::clearList(){
     Node *current = head;
@@ -122,4 +115,8 @@ void LinkedList::clearList(){
     }
     delete head;
     head = NULL;
+}
+
+bool LinkedList::isEmpty(){
+    return nodes > 0;
 }
