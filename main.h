@@ -14,7 +14,14 @@
 
 #include "fifo.h"
 
+#define MAX_ID 100
+#define TEST_CASES 20
+#define BUFFER_SIZE 10
+
 using std::cout;
 using std::endl;
+
+void make_test_cases(int*, char**, int);
+void display_test_cases(int*, char**, int);
 
 #endif /* MAIN_H */

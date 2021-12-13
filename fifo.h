@@ -14,6 +14,7 @@
 using std::cout;
 using std::endl;
 using std::string;
+
 struct Data {
     int id;
     string data;
@@ -30,10 +31,10 @@ class Fifo{
         Fifo();
         ~Fifo();
 
-        bool push(int, string*);//rename to push, only add to head
+        bool push(int, string*);
         bool pop();
-        bool peek(int, Data*);//rename to peek. does the same thing
-        bool isEmpty();//new method needs definition
+        bool peek(Data*);//peeks tail node data
+        bool isEmpty();
 
         void clearList();
         void printList(bool = false);

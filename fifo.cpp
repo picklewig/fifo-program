@@ -64,14 +64,14 @@ bool Fifo::pop(){
     return deleted;
 }
 
-bool Fifo::peek(int id, Data* emptyStruct){
+bool Fifo::peek(Data* emptyStruct){
     bool gotten = false;
     Node *current = head;
 
-    while(current->next != NULL and id != current->data.id){
+    while(current and current->next != NULL){
         current = current->next;
     }
-    if(id == current->data.id){
+    if(current) {
         emptyStruct->id = current->data.id;
         emptyStruct->data = current->data.data;
         gotten = true;
