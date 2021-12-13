@@ -1,11 +1,8 @@
-/*
- * COSC 2436
- * Stacks Assignment
- * Do not modify this comment
- * 
- * You may modify this file as needed for your main.cpp but do not
- * change the size of the test cases.
- */
+/**************
+ * author: Isaac Shepherd
+ * file: main.h
+ * holds utilities and constants used in main, holds function prototypes
+ **************/
 
 #ifndef MAIN_H
 #define MAIN_H

@@ -1,7 +1,7 @@
-
 /**************
  * author: Isaac Shepherd
  * file: fifo.h
+ * holds class prototype and structures used in fifo list. includes string and istream for untility
  **************/
 
 

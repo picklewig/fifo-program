@@ -1,7 +1,7 @@
-
 /**************
  * author: Isaac Shepherd
- * file: linkedlist.cpp
+ * file: fifo.cpp
+ * holds method definitions for class fifo. includes fifo.h
  **************/
 
 #include "fifo.h"
