@@ -25,14 +25,14 @@ struct Node {
     Node *prev;
 };
 
-class LinkedList{
+class Fifo{
     public:
-        LinkedList();
-        ~LinkedList();
+        Fifo();
+        ~Fifo();
 
         bool push(int, string*);//rename to push, only add to head
         bool pop();
-        bool getNode(int, Data*);//rename to peek. does the same thing
+        bool peek(int, Data*);//rename to peek. does the same thing
         bool isEmpty();//new method needs definition
 
         void clearList();

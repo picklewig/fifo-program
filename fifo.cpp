@@ -6,15 +6,15 @@
 
 #include "fifo.h"
 
-LinkedList::LinkedList(){
+Fifo::Fifo(){
     head = NULL;
 }
 
-LinkedList::~LinkedList(){
+Fifo::~Fifo(){
     clearList();
 }
 
-Node* LinkedList::createNode(int id, string* information){
+Node* Fifo::createNode(int id, string* information){
     Node *newNode = new Node;
     newNode->data.id = id;
     newNode->data.data = *information;
@@ -23,7 +23,7 @@ Node* LinkedList::createNode(int id, string* information){
     return newNode;
 }
 
-bool LinkedList::push(int id, string* information){
+bool Fifo::push(int id, string* information){
     bool added = false;
     if(id > 0 and *information != ""){
         Node *current = head; //head initially is NULL
@@ -44,7 +44,7 @@ bool LinkedList::push(int id, string* information){
     return added;
 }
 
-bool LinkedList::pop(){
+bool Fifo::pop(){
     bool deleted = false;
     Node *current = head;
     while(current and current->next != NULL){
@@ -64,7 +64,7 @@ bool LinkedList::pop(){
     return deleted;
 }
 
-bool LinkedList::getNode(int id, Data* emptyStruct){
+bool Fifo::peek(int id, Data* emptyStruct){
     bool gotten = false;
     Node *current = head;
 
@@ -79,7 +79,7 @@ bool LinkedList::getNode(int id, Data* emptyStruct){
     return gotten;
 }
 
-void LinkedList::printList(bool backwards){
+void Fifo::printList(bool backwards){
     Node *current = head;
     int nodeNumber = 0;
 
@@ -105,7 +105,7 @@ void LinkedList::printList(bool backwards){
 }
 
 
-void LinkedList::clearList(){
+void Fifo::clearList(){
     Node *current = head;
 
     while(head and head->next){
@@ -117,6 +117,6 @@ void LinkedList::clearList(){
     head = NULL;
 }
 
-bool LinkedList::isEmpty(){
+bool Fifo::isEmpty(){
     return nodes > 0;
 }
