@@ -33,7 +33,7 @@ class Fifo{
 
         bool push(int, string*);
         bool pop();
-        bool peek(Data*);//peeks tail node data
+        bool peek(Data&);//peeks tail node data
         bool isEmpty();
 
         void clearList();

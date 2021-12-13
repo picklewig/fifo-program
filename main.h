@@ -11,7 +11,7 @@
 #define MAIN_H
 
 #include <iostream>     /* cout, endl */
-
+#include <stdlib.h>     /* srand, rand */
 #include "fifo.h"
 
 #define MAX_ID 100
